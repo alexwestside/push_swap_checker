@@ -90,6 +90,7 @@ push_swap_checker_EXTERNAL_OBJECTS =
 
 push_swap_checker: CMakeFiles/push_swap_checker.dir/main.c.o
 push_swap_checker: CMakeFiles/push_swap_checker.dir/build.make
+push_swap_checker: ../ft_printf/libftprintf.a
 push_swap_checker: CMakeFiles/push_swap_checker.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable push_swap_checker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/push_swap_checker.dir/link.txt --verbose=$(VERBOSE)

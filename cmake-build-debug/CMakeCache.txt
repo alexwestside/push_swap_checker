@@ -190,6 +190,18 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
 //Value Computed by CMake
+push_swap__BINARY_DIR:STATIC=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug
+
+//Value Computed by CMake
+push_swap__SOURCE_DIR:STATIC=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker
+
+//Value Computed by CMake
+push_swap_c_BINARY_DIR:STATIC=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug
+
+//Value Computed by CMake
+push_swap_c_SOURCE_DIR:STATIC=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker
+
+//Value Computed by CMake
 push_swap_checker_BINARY_DIR:STATIC=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug
 
 //Value Computed by CMake
