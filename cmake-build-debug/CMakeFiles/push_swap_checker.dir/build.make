@@ -57,41 +57,41 @@ include CMakeFiles/push_swap_checker.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/push_swap_checker.dir/flags.make
 
-CMakeFiles/push_swap_checker.dir/main.cpp.o: CMakeFiles/push_swap_checker.dir/flags.make
-CMakeFiles/push_swap_checker.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/push_swap_checker.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/push_swap_checker.dir/main.cpp.o -c /nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.cpp
+CMakeFiles/push_swap_checker.dir/main.c.o: CMakeFiles/push_swap_checker.dir/flags.make
+CMakeFiles/push_swap_checker.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/push_swap_checker.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/push_swap_checker.dir/main.c.o   -c /nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.c
 
-CMakeFiles/push_swap_checker.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/push_swap_checker.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.cpp > CMakeFiles/push_swap_checker.dir/main.cpp.i
+CMakeFiles/push_swap_checker.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/push_swap_checker.dir/main.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.c > CMakeFiles/push_swap_checker.dir/main.c.i
 
-CMakeFiles/push_swap_checker.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/push_swap_checker.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.cpp -o CMakeFiles/push_swap_checker.dir/main.cpp.s
+CMakeFiles/push_swap_checker.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/push_swap_checker.dir/main.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.c -o CMakeFiles/push_swap_checker.dir/main.c.s
 
-CMakeFiles/push_swap_checker.dir/main.cpp.o.requires:
+CMakeFiles/push_swap_checker.dir/main.c.o.requires:
 
-.PHONY : CMakeFiles/push_swap_checker.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/push_swap_checker.dir/main.c.o.requires
 
-CMakeFiles/push_swap_checker.dir/main.cpp.o.provides: CMakeFiles/push_swap_checker.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/push_swap_checker.dir/main.cpp.o.provides
+CMakeFiles/push_swap_checker.dir/main.c.o.provides: CMakeFiles/push_swap_checker.dir/main.c.o.requires
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/main.c.o.provides.build
+.PHONY : CMakeFiles/push_swap_checker.dir/main.c.o.provides
 
-CMakeFiles/push_swap_checker.dir/main.cpp.o.provides.build: CMakeFiles/push_swap_checker.dir/main.cpp.o
+CMakeFiles/push_swap_checker.dir/main.c.o.provides.build: CMakeFiles/push_swap_checker.dir/main.c.o
 
 
 # Object files for target push_swap_checker
 push_swap_checker_OBJECTS = \
-"CMakeFiles/push_swap_checker.dir/main.cpp.o"
+"CMakeFiles/push_swap_checker.dir/main.c.o"
 
 # External object files for target push_swap_checker
 push_swap_checker_EXTERNAL_OBJECTS =
 
-push_swap_checker: CMakeFiles/push_swap_checker.dir/main.cpp.o
+push_swap_checker: CMakeFiles/push_swap_checker.dir/main.c.o
 push_swap_checker: CMakeFiles/push_swap_checker.dir/build.make
 push_swap_checker: CMakeFiles/push_swap_checker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable push_swap_checker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable push_swap_checker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/push_swap_checker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +99,7 @@ CMakeFiles/push_swap_checker.dir/build: push_swap_checker
 
 .PHONY : CMakeFiles/push_swap_checker.dir/build
 
-CMakeFiles/push_swap_checker.dir/requires: CMakeFiles/push_swap_checker.dir/main.cpp.o.requires
+CMakeFiles/push_swap_checker.dir/requires: CMakeFiles/push_swap_checker.dir/main.c.o.requires
 
 .PHONY : CMakeFiles/push_swap_checker.dir/requires
 

@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/push_swap_checker.dir/main.cpp.o"
+  "CMakeFiles/push_swap_checker.dir/main.c.o"
   "push_swap_checker.pdb"
   "push_swap_checker"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang C)
   include(CMakeFiles/push_swap_checker.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()
