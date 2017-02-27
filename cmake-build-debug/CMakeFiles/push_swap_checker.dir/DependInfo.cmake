@@ -4,7 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/checker.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/checker.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/main.c.o"
+  "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/move_stack.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/move_stack.c.o"
+  "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/usage.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/usage.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

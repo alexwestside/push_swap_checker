@@ -82,10 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/checker.c">
+			<Option target="push_swap_checker"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.c">
 			<Option target="push_swap_checker"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/move_stack.c">
+			<Option target="push_swap_checker"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/push_swap_checker.h">
+			<Option target="push_swap_checker"/>
+		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/usage.c">
 			<Option target="push_swap_checker"/>
 		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/CMakeLists.txt">

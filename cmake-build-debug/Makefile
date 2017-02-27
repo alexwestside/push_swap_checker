@@ -123,6 +123,33 @@ push_swap_checker/fast:
 	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/build
 .PHONY : push_swap_checker/fast
 
+checker.o: checker.c.o
+
+.PHONY : checker.o
+
+# target to build an object file
+checker.c.o:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/checker.c.o
+.PHONY : checker.c.o
+
+checker.i: checker.c.i
+
+.PHONY : checker.i
+
+# target to preprocess a source file
+checker.c.i:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/checker.c.i
+.PHONY : checker.c.i
+
+checker.s: checker.c.s
+
+.PHONY : checker.s
+
+# target to generate assembly for a file
+checker.c.s:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/checker.c.s
+.PHONY : checker.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -150,6 +177,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/main.c.s
 .PHONY : main.c.s
 
+move_stack.o: move_stack.c.o
+
+.PHONY : move_stack.o
+
+# target to build an object file
+move_stack.c.o:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/move_stack.c.o
+.PHONY : move_stack.c.o
+
+move_stack.i: move_stack.c.i
+
+.PHONY : move_stack.i
+
+# target to preprocess a source file
+move_stack.c.i:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/move_stack.c.i
+.PHONY : move_stack.c.i
+
+move_stack.s: move_stack.c.s
+
+.PHONY : move_stack.s
+
+# target to generate assembly for a file
+move_stack.c.s:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/move_stack.c.s
+.PHONY : move_stack.c.s
+
+usage.o: usage.c.o
+
+.PHONY : usage.o
+
+# target to build an object file
+usage.c.o:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/usage.c.o
+.PHONY : usage.c.o
+
+usage.i: usage.c.i
+
+.PHONY : usage.i
+
+# target to preprocess a source file
+usage.c.i:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/usage.c.i
+.PHONY : usage.c.i
+
+usage.s: usage.c.s
+
+.PHONY : usage.s
+
+# target to generate assembly for a file
+usage.c.s:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/usage.c.s
+.PHONY : usage.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +240,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... push_swap_checker"
+	@echo "... checker.o"
+	@echo "... checker.i"
+	@echo "... checker.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... move_stack.o"
+	@echo "... move_stack.i"
+	@echo "... move_stack.s"
+	@echo "... usage.o"
+	@echo "... usage.i"
+	@echo "... usage.s"
 .PHONY : help
 
 
