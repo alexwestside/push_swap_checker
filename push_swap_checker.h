@@ -1,5 +1,4 @@
 
-
 #ifndef PUSH_SWAP_CHECKER_PUSH_SWAP_CHECKER_H
 #define PUSH_SWAP_CHECKER_PUSH_SWAP_CHECKER_H
 
@@ -34,7 +33,6 @@ typedef struct 		s_stack
     struct s_stack	*prev;
 }					t_stack;
 
-
 t_stack *ft_check_and_fill(char **av, t_stack *a);
 void  ft_val_check(char **av);
 t_stack *ft_fill_stack(int val, t_stack *a);
@@ -47,7 +45,6 @@ int ft_if_is_sorted(t_stack *a);
 void ft_print_stack(t_stack **a, t_stack **b);
 void ft_answer(t_stack **a, t_stack **b);
 void ft_std_input(t_stack **a, t_stack **b, char *s);
-
 void ft_swap(t_stack **head);
 void ft_sswap(t_stack **a, t_stack **b);
 void ft_rotate(t_stack **head);
