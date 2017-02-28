@@ -85,6 +85,12 @@
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/checker.c">
 			<Option target="push_swap_checker"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/gnl/get_next_line.c">
+			<Option target="push_swap_checker"/>
+		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/gnl/get_next_line.h">
+			<Option target="push_swap_checker"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.c">
 			<Option target="push_swap_checker"/>
 		</Unit>

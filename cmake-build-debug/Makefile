@@ -150,6 +150,33 @@ checker.c.s:
 	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/checker.c.s
 .PHONY : checker.c.s
 
+gnl/get_next_line.o: gnl/get_next_line.c.o
+
+.PHONY : gnl/get_next_line.o
+
+# target to build an object file
+gnl/get_next_line.c.o:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/gnl/get_next_line.c.o
+.PHONY : gnl/get_next_line.c.o
+
+gnl/get_next_line.i: gnl/get_next_line.c.i
+
+.PHONY : gnl/get_next_line.i
+
+# target to preprocess a source file
+gnl/get_next_line.c.i:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/gnl/get_next_line.c.i
+.PHONY : gnl/get_next_line.c.i
+
+gnl/get_next_line.s: gnl/get_next_line.c.s
+
+.PHONY : gnl/get_next_line.s
+
+# target to generate assembly for a file
+gnl/get_next_line.c.s:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/gnl/get_next_line.c.s
+.PHONY : gnl/get_next_line.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -243,6 +270,9 @@ help:
 	@echo "... checker.o"
 	@echo "... checker.i"
 	@echo "... checker.s"
+	@echo "... gnl/get_next_line.o"
+	@echo "... gnl/get_next_line.i"
+	@echo "... gnl/get_next_line.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

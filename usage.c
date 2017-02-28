@@ -14,7 +14,6 @@ void ft_usage_chk(char *av)
     exit(EXIT_FAILURE);
 }
 
-
 long long int ft_atoi_push_swap(char *s)
 {
     long long int res;
@@ -33,7 +32,10 @@ long long int ft_atoi_push_swap(char *s)
         res = res * 10 + *(s++) - 48;
     res = sign < 0 ? res * sign : res;
     if (res > MAX_INT || res < MIN_INT)
+    {
         ft_error_chk();
+        return (0);
+    }
     else
         return (res);
 }
@@ -63,14 +65,14 @@ void ft_exit_success_chk(t_stack *a, t_stack *b)
     {
         ft_printf("Stack with ONE elemend is alredy ordered!!!\n");
         ft_print_stack(a, b);
-        ft_printf("OK");
+        ft_printf("OK\n");
         exit(EXIT_SUCCESS);
     }
     if (!ft_if_is_sorted(a))
     {
         ft_printf("Stack is alredy ordered!!!\n");
         ft_print_stack(a, b);
-        ft_printf("OK");
+        ft_printf("OK\n");
         exit(EXIT_SUCCESS);
     }
 }
@@ -81,24 +83,28 @@ int ft_if_is_sorted(t_stack *a)
     int val;
 
     list = a;
-    val = list->val;
-    while (list)
+    if (list)
     {
-        if (val > list->val)
-            return (1);
         val = list->val;
-        list = list->next;
+        while (list)
+        {
+            if (val > list->val)
+                return (1);
+            val = list->val;
+            list = list->next;
+        }
+        return (0);
     }
-    return (0);
+    return (1);
 }
 
-void ft_print_stack(t_stack *a, t_stack *b)
+void ft_print_stack(t_stack **a, t_stack **b)
 {
     t_stack *list1;
     t_stack *list2;
 
-    list1 = a;
-    list2 = b;
+    list1 = *a;
+    list2 = *b;
     ft_printf("----------------   ----------------\n");
     ft_printf("| STACK: [ A ] |   | STACK: [ B ] |\n");
     ft_printf("----------------   ----------------\n");
@@ -106,11 +112,12 @@ void ft_print_stack(t_stack *a, t_stack *b)
     {
         if (list1)
         {
-            ft_printf("|%8d%7|   ", list1->val);
+            ft_printf("|%8d%7|", list1->val);
             list1 = list1->next;
         }
         else
             ft_printf("|%15|");
+        ft_printf("   ");
         if (list2)
         {
             ft_printf("|%8d%7|", list2->val);
@@ -124,8 +131,11 @@ void ft_print_stack(t_stack *a, t_stack *b)
     ft_printf("\n");
 }
 
-void ft_answer(t_stack *a, t_stack *b)
+void ft_answer(t_stack **a, t_stack **b)
 {
-    !ft_if_is_sorted(a) ? ft_printf("OK") : ft_printf("KO");
+    if (!(*a))
+        ft_printf("KO\n Stack is AMPTY!!!");
+    else
+        !ft_if_is_sorted(*a) ? ft_printf("OK\n") : ft_printf("KO\n");
     ft_print_stack(a, b);
 }

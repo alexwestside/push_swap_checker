@@ -44,7 +44,21 @@ void ft_error_chk(void);
 void ft_usage_chk(char *av);
 void ft_exit_success_chk(t_stack *a, t_stack *b);
 int ft_if_is_sorted(t_stack *a);
-void ft_print_stack(t_stack *a, t_stack *b);
-void ft_answer(t_stack *a, t_stack *b);
+void ft_print_stack(t_stack **a, t_stack **b);
+void ft_answer(t_stack **a, t_stack **b);
+void ft_std_input(t_stack **a, t_stack **b, char *s);
+
+void ft_swap(t_stack **head);
+void ft_sswap(t_stack **a, t_stack **b);
+void ft_rotate(t_stack **head);
+void ft_rrotate(t_stack **a, t_stack **b);
+void ft_rev_rotate(t_stack **head);
+void ft_rrev_rotate(t_stack **a, t_stack **b);
+void ft_push_b(t_stack **a, t_stack **b);
+void ft_push_a(t_stack **a, t_stack **b);
+void ft_swap_sa_sb_ss(t_stack **a, t_stack **b, char *s);
+void ft_push_pa_pb(t_stack **a, t_stack **b, char *s);
+void ft_swap_ra_rb_rr(t_stack **a, t_stack **b, char *s);
+void ft_rrotat_rrra_rrb_rrr(t_stack **a, t_stack **b, char *s);
 
 #endif //PUSH_SWAP_CHECKER_PUSH_SWAP_CHECKER_H
