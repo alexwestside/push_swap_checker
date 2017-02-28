@@ -8,16 +8,19 @@ void ft_swap(t_stack **head)
 
     if (*head)
     {
-        list = *head;
-        tail = *head;
-        tail = list->next;
-        list = tail->next ? tail->next : tail;
-        (*head)->prev = tail;
-        tail->prev = NULL;
-        (*head)->next = tail->next ? list : NULL;
-        tail->next = *head;
-        list->prev = *head;
-        *head = tail;
+        if ((*head)->next)
+        {
+            list = *head;
+            tail = *head;
+            tail = list->next;
+            list = tail->next ? tail->next : tail;
+            (*head)->prev = tail;
+            tail->prev = NULL;
+            (*head)->next = tail->next ? list : NULL;
+            tail->next = *head;
+            list->prev = *head;
+            *head = tail;
+        }
     }
 }
 
@@ -77,7 +80,7 @@ void ft_rrev_rotate(t_stack **a, t_stack **b)
     ft_rev_rotate(b);
 }
 
-void ft_push_b(t_stack **a, t_stack **b)
+void ft_push(t_stack **a, t_stack **b)
 {
     t_stack *list;
     t_stack *tail;
@@ -92,21 +95,22 @@ void ft_push_b(t_stack **a, t_stack **b)
         (*b)->next = NULL;
         (*b)->prev = NULL;
     }
-    else
+    else if (*a)
     {
         list = *a;
         tail = *b;
         tail->prev = *a;
         tail = tail->prev;
-        list = list->next;
+        list = list->next ? list->next : NULL;
         *a = list;
         tail->next = *b;
         *b = tail;
-        list->prev = NULL;
+        list ? list->prev = NULL : 0;
         tail->prev = NULL;
     }
 }
 
+/*
 void ft_push_a(t_stack **a, t_stack **b)
 {
     t_stack *list;
@@ -124,7 +128,7 @@ void ft_push_a(t_stack **a, t_stack **b)
         (*b)->next = NULL;
         (*b)->prev = NULL;
     }
-    else
+    else if (*a)
     {
         //list = *a;
         //tail = *b;
@@ -138,3 +142,4 @@ void ft_push_a(t_stack **a, t_stack **b)
         tail->prev = NULL;
     }
 }
+ */

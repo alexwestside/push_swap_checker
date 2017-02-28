@@ -64,14 +64,14 @@ void ft_exit_success_chk(t_stack *a, t_stack *b)
     if (!a->next)
     {
         ft_printf("Stack with ONE elemend is alredy ordered!!!\n");
-        ft_print_stack(a, b);
+        ft_print_stack(&a, &b);
         ft_printf("OK\n");
         exit(EXIT_SUCCESS);
     }
     if (!ft_if_is_sorted(a))
     {
         ft_printf("Stack is alredy ordered!!!\n");
-        ft_print_stack(a, b);
+        ft_print_stack(&a, &b);
         ft_printf("OK\n");
         exit(EXIT_SUCCESS);
     }
@@ -135,7 +135,10 @@ void ft_answer(t_stack **a, t_stack **b)
 {
     if (!(*a))
         ft_printf("KO\n Stack is AMPTY!!!");
+    else if(!(*a)->next)
+        ft_printf("Stack is alredy ordered!!!\n");
     else
         !ft_if_is_sorted(*a) ? ft_printf("OK\n") : ft_printf("KO\n");
     ft_print_stack(a, b);
+    //exit(EXIT_SUCCESS);
 }
