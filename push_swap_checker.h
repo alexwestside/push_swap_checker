@@ -57,5 +57,6 @@ void ft_swap_sa_sb_ss(t_stack **a, t_stack **b, char *s);
 void ft_push_pa_pb(t_stack **a, t_stack **b, char *s);
 void ft_swap_ra_rb_rr(t_stack **a, t_stack **b, char *s);
 void ft_rrotat_rrra_rrb_rrr(t_stack **a, t_stack **b, char *s);
+void ft_error(void);
 
 #endif //PUSH_SWAP_CHECKER_PUSH_SWAP_CHECKER_H

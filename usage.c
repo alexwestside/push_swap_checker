@@ -1,6 +1,12 @@
 
 #include "push_swap_checker.h"
 
+void ft_error(void)
+{
+    ft_printf("Error\n");
+    exit(EXIT_FAILURE);
+}
+
 void ft_usage_chk(char *av)
 {
     ft_printf("usage: %s\n", av);

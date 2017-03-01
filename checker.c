@@ -3,6 +3,8 @@
 
 void ft_std_input(t_stack **a, t_stack **b, char *s)
 {
+    if (!ft_isalpha(*s))
+        ft_error();
     if (*s == 's')
     {
         s++;
