@@ -140,11 +140,11 @@ void ft_print_stack(t_stack **a, t_stack **b)
 void ft_answer(t_stack **a, t_stack **b)
 {
     if (!(*a))
-        ft_printf("KO\n Stack is AMPTY!!!");
+        ft_printf("KO\n Stack is AMPTY!!!\n");
     else if(!(*a)->next)
         ft_printf("Stack is alredy ordered!!!\n");
     else
         !ft_if_is_sorted(*a) ? ft_printf("OK\n") : ft_printf("KO\n");
-    ft_print_stack(a, b);
+    //ft_print_stack(a, b);
     //exit(EXIT_SUCCESS);
 }

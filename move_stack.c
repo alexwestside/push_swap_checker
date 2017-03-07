@@ -1,7 +1,7 @@
 
 #include "push_swap_checker.h"
 
-void ft_swap(t_stack **head)
+void ft_swap(t_stack **head, int id)
 {
     t_stack *list;
     t_stack *tail;
@@ -22,15 +22,16 @@ void ft_swap(t_stack **head)
             *head = tail;
         }
     }
+    //ft_printf("%s\n", !id ? "sa" : "sb");
 }
 
 void ft_sswap(t_stack **a, t_stack **b)
 {
-    ft_swap(a);
-    ft_swap(b);
+    ft_swap(a, 0);
+    ft_swap(b, 1);
 }
 
-void ft_rotate(t_stack **head)
+void ft_rotate(t_stack **head, int id)
 {
     t_stack *list;
     t_stack *tail;
@@ -47,15 +48,16 @@ void ft_rotate(t_stack **head)
         (*head)->next = NULL;
         (*head) = tail;
     }
+    //ft_printf("%s\n", !id ? "ra" : "rb");
 }
 
 void ft_rrotate(t_stack **a, t_stack **b)
 {
-    ft_rotate(a);
-    ft_rotate(b);
+    ft_rotate(a, 0);
+    ft_rotate(b, 1);
 }
 
-void ft_rev_rotate(t_stack **head)
+void ft_rev_rotate(t_stack **head, int id)
 {
     t_stack *list;
     t_stack *tail;
@@ -72,15 +74,16 @@ void ft_rev_rotate(t_stack **head)
         (*head)->prev = list;
         (*head) = list;
     }
+    //ft_printf("%s\n", !id ? "rra" : "rrb");
 }
 
 void ft_rrev_rotate(t_stack **a, t_stack **b)
 {
-    ft_rev_rotate(a);
-    ft_rev_rotate(b);
+    ft_rev_rotate(a, 0);
+    ft_rev_rotate(b, 1);
 }
 
-void ft_push(t_stack **a, t_stack **b)
+void ft_push(t_stack **a, t_stack **b, int id)
 {
     t_stack *list;
     t_stack *tail;
@@ -108,6 +111,7 @@ void ft_push(t_stack **a, t_stack **b)
         list ? list->prev = NULL : 0;
         tail->prev = NULL;
     }
+    //ft_printf("%s\n", !id ? "pa" : "pb");
 }
 
 /*
