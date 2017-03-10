@@ -43,33 +43,32 @@ void    ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
 {
     t_stack *list1;
     t_stack *list2;
+    char *s;
 
+    s = f->color_mode ? RED : END;
     list1 = *a;
     list2 = *b;
-    ft_printf("----------------   ----------------\n");
-    ft_printf("| STACK: [ A ] |   | STACK: [ B ] |\n");
-    ft_printf("----------------   ----------------\n");
+    ft_printf("%s----------------   ----------------%s\n", s, END);
+    ft_printf("%s| STACK: [ A ] |   | STACK: [ B ] |\n", s, END);
+    ft_printf("%s----------------   ----------------\n", s, END);
     while (list1 || list2)
     {
         if (list1)
         {
-            ft_printf("|%8d%7|", list1->val);
+            ft_printf("%s|%8d%7|   %s", s, list1->val, END);
             list1 = list1->next;
         }
         else
-            ft_printf("|%15|");
-        ft_printf("   ");
+            ft_printf("%s|%15|   %s", s, END);
         if (list2)
         {
-            ft_printf("|%8d%7|", list2->val);
+            ft_printf("|%8d%7|\n", s, list2->val, END);
             list2 = list2->next;
         }
         else
-            ft_printf("|%15|");
-        ft_printf("\n");
+            ft_printf("%s|%15|%s\n", s, END);
     }
-    ft_printf("----------------   ----------------");
-    ft_printf("\n");
+    ft_printf("%s----------------   ----------------%s\n", s, END);
 }
 
 void    ft_answer(t_stack **a, t_stack **b, t_flags *f)
@@ -80,7 +79,8 @@ void    ft_answer(t_stack **a, t_stack **b, t_flags *f)
         ft_printf("Stack is alredy ordered!!!\n");
     else
         !ft_if_is_sorted(*a, f) ? ft_printf("OK\n") : ft_printf("KO\n");
-    f->starr_end_mode ? ft_print_stack(a, b, f) : 0;
+    if (f->starr_end_mode && !f->status_oper_mode)
+        ft_print_stack(a, b, f);
     f->number_oper_mode ? ft_printf("%d\n", f->count_op) : 0;
     f->status_oper_mode ? ft_print_stack(a, b, f) : 0;
     exit(EXIT_SUCCESS);

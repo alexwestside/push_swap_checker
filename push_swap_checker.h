@@ -3,6 +3,7 @@
 # define PUSH_SWAP_CHECKER_PUSH_SWAP_CHECKER_H
 # define MIN_INT -2147483648
 # define MAX_INT 2147483647
+
 # define RED   "\x1B[31m"
 # define GRN   "\x1B[32m"
 # define YEL   "\x1B[33m"
@@ -10,7 +11,7 @@
 # define MAG   "\x1B[35m"
 # define CYN   "\x1B[36m"
 # define WHT   "\x1B[37m"
-# define RESET "\x1B[0m"
+# define END    "\x1B[0m"
 
 #include "ft_printf/ft_printf.h"
 #include "gnl/get_next_line.h"
