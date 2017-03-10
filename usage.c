@@ -10,13 +10,14 @@ void ft_error(void)
 void ft_usage_chk(char *av)
 {
     ft_printf("usage: %s\n", av);
-    ft_printf("use number >= -2147483648 and <= 2147483647\n");
+    ft_printf("use integer >= -2147483648 and <= 2147483647\n");
+    ft_printf("use next flags:\n");
     ft_printf("\t -v fot [status operation mode]\n");
     ft_printf("\t -c fot [color mode]\n");
-    ft_printf("\t -o for [number operation mode]\n");
+    ft_printf("\t -n for [number operation mode]\n");
     ft_printf("\t -i for [start and end mode]\n");
-    ft_printf("\t -a for [enable all mode]\n");
-    ft_printf("\t -s for [disable all mode]\n");
+    ft_printf("\t -e for [enable all mode]\n");
+    ft_printf("\t -d for [disable all mode]\n");
     exit(EXIT_FAILURE);
 }
 
@@ -65,25 +66,25 @@ void ft_error_chk(void)
     exit(EXIT_FAILURE);
 }
 
-void ft_exit_success_chk(t_stack *a, t_stack *b)
+void ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
 {
     if (!a->next)
     {
         ft_printf("Stack with ONE elemend is alredy ordered!!!\n");
-        ft_print_stack(&a, &b);
+        f->starr_end_mode ? ft_print_stack(&a, &b, f) : 0;
         ft_printf("OK\n");
         exit(EXIT_SUCCESS);
     }
-    if (!ft_if_is_sorted(a))
+    if (!ft_if_is_sorted(a, f))
     {
         ft_printf("Stack is alredy ordered!!!\n");
-        ft_print_stack(&a, &b);
+        f->starr_end_mode ? ft_print_stack(&a, &b, f) : 0;
         ft_printf("OK\n");
         exit(EXIT_SUCCESS);
     }
 }
 
-int ft_if_is_sorted(t_stack *a)
+int ft_if_is_sorted(t_stack *a, t_flags *f)
 {
     t_stack *list;
     int val;
@@ -104,7 +105,7 @@ int ft_if_is_sorted(t_stack *a)
     return (1);
 }
 
-void ft_print_stack(t_stack **a, t_stack **b)
+void ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
 {
     t_stack *list1;
     t_stack *list2;
@@ -137,14 +138,36 @@ void ft_print_stack(t_stack **a, t_stack **b)
     ft_printf("\n");
 }
 
-void ft_answer(t_stack **a, t_stack **b)
+void ft_answer(t_stack **a, t_stack **b, t_flags *f)
 {
     if (!(*a))
         ft_printf("KO\n Stack is AMPTY!!!\n");
     else if(!(*a)->next)
         ft_printf("Stack is alredy ordered!!!\n");
     else
-        !ft_if_is_sorted(*a) ? ft_printf("OK\n") : ft_printf("KO\n");
-    //ft_print_stack(a, b);
-    //exit(EXIT_SUCCESS);
+        !ft_if_is_sorted(*a, f) ? ft_printf("OK\n") : ft_printf("KO\n");
+    f->starr_end_mode ? ft_print_stack(a, b, f) : 0;
+    exit(EXIT_SUCCESS);
+}
+
+int ft_fill_flags(char s, t_flags *f)
+{
+    if (s == 'v' || s == 'c' || s == 'n' || s == 'i' || s == 'e' || s == 'd')
+    {
+        s == 'v' ? f->status_oper_mode = 1 : 0;
+        s == 'c' ? f->color_mode = 1 : 0;
+        s == 'n' ? f->number_oper_mode = 1 : 0;
+        s == 'i' ? f->starr_end_mode = 1 : 0;
+        s == 'e' ? f->enable_all_flags = 1 : 0;
+        s == 'd' ? f->disable_all_flags = 1 : 0;
+        return (1);
+    }
+    return (0);
+}
+
+int ft_fast_check(char s)
+{
+    if (s == 'v' || s == 'c' || s == 'n' || s == 'i' || s == 'e' || s == 'd')
+        return (1);
+    return (0);
 }

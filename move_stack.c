@@ -1,7 +1,7 @@
 
 #include "push_swap_checker.h"
 
-void ft_swap(t_stack **head, int id)
+void ft_swap(t_stack **head, int id, t_flags *f)
 {
     t_stack *list;
     t_stack *tail;
@@ -22,16 +22,18 @@ void ft_swap(t_stack **head, int id)
             *head = tail;
         }
     }
-    //ft_printf("%s\n", !id ? "sa" : "sb");
+    if (id != -1 && f->status_oper_mode)
+        ft_printf("%s\n", !id ? "sa" : "sb");
 }
 
-void ft_sswap(t_stack **a, t_stack **b)
+void ft_sswap(t_stack **a, t_stack **b, t_flags *f)
 {
-    ft_swap(a, 0);
-    ft_swap(b, 1);
+    ft_swap(a, -1, f);
+    ft_swap(b, -1, f);
+    f->status_oper_mode ? ft_printf("%s\n", "ss") : 0;
 }
 
-void ft_rotate(t_stack **head, int id)
+void ft_rotate(t_stack **head, int id, t_flags *f)
 {
     t_stack *list;
     t_stack *tail;
@@ -48,16 +50,18 @@ void ft_rotate(t_stack **head, int id)
         (*head)->next = NULL;
         (*head) = tail;
     }
-    //ft_printf("%s\n", !id ? "ra" : "rb");
+    if (id != -1 && f->status_oper_mode)
+        ft_printf("%s\n", !id ? "ra" : "rb");
 }
 
-void ft_rrotate(t_stack **a, t_stack **b)
+void ft_rrotate(t_stack **a, t_stack **b, t_flags *f)
 {
-    ft_rotate(a, 0);
-    ft_rotate(b, 1);
+    ft_rotate(a, -1, f);
+    ft_rotate(b, -1, f);
+    f->status_oper_mode ? ft_printf("%s\n", "rr") : 0;
 }
 
-void ft_rev_rotate(t_stack **head, int id)
+void ft_rev_rotate(t_stack **head, int id, t_flags *f)
 {
     t_stack *list;
     t_stack *tail;
@@ -74,16 +78,18 @@ void ft_rev_rotate(t_stack **head, int id)
         (*head)->prev = list;
         (*head) = list;
     }
-    //ft_printf("%s\n", !id ? "rra" : "rrb");
+    if (id != -1 && f->status_oper_mode)
+       ft_printf("%s\n", !id ? "rra" : "rrb");
 }
 
-void ft_rrev_rotate(t_stack **a, t_stack **b)
+void ft_rrev_rotate(t_stack **a, t_stack **b, t_flags *f)
 {
-    ft_rev_rotate(a, 0);
-    ft_rev_rotate(b, 1);
+    ft_rev_rotate(a, -1, f);
+    ft_rev_rotate(b, -1, f);
+    f->status_oper_mode ? ft_printf("%s\n", "rrr") : 0;
 }
 
-void ft_push(t_stack **a, t_stack **b, int id)
+void ft_push(t_stack **a, t_stack **b, int id, t_flags *f)
 {
     t_stack *list;
     t_stack *tail;
@@ -111,5 +117,5 @@ void ft_push(t_stack **a, t_stack **b, int id)
         list ? list->prev = NULL : 0;
         tail->prev = NULL;
     }
-    //ft_printf("%s\n", !id ? "pa" : "pb");
+    f->status_oper_mode ? ft_printf("%s\n", !id ? "pa" : "pb") : 0;
 }
