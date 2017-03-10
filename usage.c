@@ -1,7 +1,7 @@
 
 #include "push_swap_checker.h"
 
-void ft_usage_chk(char *av)
+void	ft_usage_chk(char *av)
 {
 	ft_printf("usage: %s\n", av);
 	ft_printf("use integer >= -2147483648 and <= 2147483647\n");
@@ -15,13 +15,13 @@ void ft_usage_chk(char *av)
 	exit(EXIT_FAILURE);
 }
 
-void ft_error_chk(void)
+void	ft_error_chk(void)
 {
 	ft_printf("Error\n");
 	exit(EXIT_FAILURE);
 }
 
-void ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
+void	ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
 {
 	if (!a->next)
 	{
@@ -39,11 +39,11 @@ void ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
 	}
 }
 
-void ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
+void	ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
 {
-	t_stack *list1;
-	t_stack *list2;
-	char *s;
+	t_stack	*list1;
+	t_stack	*list2;
+	char 	*s;
 
 	s = f->color_mode ? RED : END;
 	list1 = *a;
@@ -71,7 +71,7 @@ void ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
 	ft_printf("%s----------------   ----------------%s\n", s, END);
 }
 
-void ft_answer(t_stack **a, t_stack **b, t_flags *f)
+void	ft_answer(t_stack **a, t_stack **b, t_flags *f)
 {
 	if (!(*a))
 		ft_printf("KO\n Stack is AMPTY!!!\n");

@@ -1,10 +1,10 @@
 
 #include "push_swap_checker.h"
 
-long long int   ft_atoi_push_swap(char *s)
+long long int	ft_atoi_push_swap(char *s)
 {
-    long long int   res;
-    int             sign;
+    long long int	res;
+    int				sign;
 
     res = 0;
     sign = 0;
@@ -27,10 +27,10 @@ long long int   ft_atoi_push_swap(char *s)
         return (res);
 }
 
-int         ft_if_is_sorted(t_stack *a, t_flags *f)
+int				ft_if_is_sorted(t_stack *a, t_flags *f)
 {
-    t_stack *list;
-    int     val;
+    t_stack	*list;
+    int		val;
 
     list = a;
     if (list)
@@ -48,7 +48,7 @@ int         ft_if_is_sorted(t_stack *a, t_flags *f)
     return (1);
 }
 
-int         ft_fast_check(char s)
+int				ft_fast_check(char s)
 {
     if (s == 'v' || s == 'c' || s == 'n' || s == 'i' || s == 'e' || s == 'd')
         return (1);
@@ -63,9 +63,9 @@ void        ft_flag_enable(t_flags *f)
     f->starr_end_mode = 1;
 }
 
-void    ft_check_dublicates(int val, t_stack *a)
+void			ft_check_dublicates(int val, t_stack *a)
 {
-    t_stack *list;
+    t_stack	*list;
 
     list = a;
     while (list)
