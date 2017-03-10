@@ -4,7 +4,7 @@
 void    ft_std_input(t_stack **a, t_stack **b, char *s, t_flags *f)
 {
     if (!ft_isalpha(*s) && *s)
-        ft_error();
+        ft_error_chk();
     else if (!ft_strcmp(s, "sa") || !ft_strcmp(s, "sb") || !ft_strcmp(s, "ss"))
         ft_swap_sa_sb_ss(a, b, s, f);
     else if (!ft_strcmp(s, "pa") || !ft_strcmp(s, "pb"))

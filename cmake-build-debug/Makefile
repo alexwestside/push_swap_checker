@@ -231,6 +231,60 @@ move_stack.c.s:
 	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/move_stack.c.s
 .PHONY : move_stack.c.s
 
+move_stack2.o: move_stack2.c.o
+
+.PHONY : move_stack2.o
+
+# target to build an object file
+move_stack2.c.o:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/move_stack2.c.o
+.PHONY : move_stack2.c.o
+
+move_stack2.i: move_stack2.c.i
+
+.PHONY : move_stack2.i
+
+# target to preprocess a source file
+move_stack2.c.i:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/move_stack2.c.i
+.PHONY : move_stack2.c.i
+
+move_stack2.s: move_stack2.c.s
+
+.PHONY : move_stack2.s
+
+# target to generate assembly for a file
+move_stack2.c.s:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/move_stack2.c.s
+.PHONY : move_stack2.c.s
+
+sub.o: sub.c.o
+
+.PHONY : sub.o
+
+# target to build an object file
+sub.c.o:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/sub.c.o
+.PHONY : sub.c.o
+
+sub.i: sub.c.i
+
+.PHONY : sub.i
+
+# target to preprocess a source file
+sub.c.i:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/sub.c.i
+.PHONY : sub.c.i
+
+sub.s: sub.c.s
+
+.PHONY : sub.s
+
+# target to generate assembly for a file
+sub.c.s:
+	$(MAKE) -f CMakeFiles/push_swap_checker.dir/build.make CMakeFiles/push_swap_checker.dir/sub.c.s
+.PHONY : sub.c.s
+
 usage.o: usage.c.o
 
 .PHONY : usage.o
@@ -279,6 +333,12 @@ help:
 	@echo "... move_stack.o"
 	@echo "... move_stack.i"
 	@echo "... move_stack.s"
+	@echo "... move_stack2.o"
+	@echo "... move_stack2.i"
+	@echo "... move_stack2.s"
+	@echo "... sub.o"
+	@echo "... sub.i"
+	@echo "... sub.s"
 	@echo "... usage.o"
 	@echo "... usage.i"
 	@echo "... usage.s"

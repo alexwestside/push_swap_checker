@@ -1,11 +1,19 @@
 
 #ifndef PUSH_SWAP_CHECKER_PUSH_SWAP_CHECKER_H
-#define PUSH_SWAP_CHECKER_PUSH_SWAP_CHECKER_H
+# define PUSH_SWAP_CHECKER_PUSH_SWAP_CHECKER_H
+# define MIN_INT -2147483648
+# define MAX_INT 2147483647
+# define RED   "\x1B[31m"
+# define GRN   "\x1B[32m"
+# define YEL   "\x1B[33m"
+# define BLU   "\x1B[34m"
+# define MAG   "\x1B[35m"
+# define CYN   "\x1B[36m"
+# define WHT   "\x1B[37m"
+# define RESET "\x1B[0m"
 
 #include "ft_printf/ft_printf.h"
 #include "gnl/get_next_line.h"
-#define MIN_INT -2147483648
-#define MAX_INT 2147483647
 
 typedef struct 	s_flags
 {
@@ -52,5 +60,6 @@ void                ft_push_pa_pb(t_stack **a, t_stack **b, char *s, t_flags *f)
 void                ft_rotate_ra_rb_rr(t_stack **a, t_stack **b, char *s, t_flags *f);
 void                ft_rrotat_rrra_rrb_rrr(t_stack **a, t_stack **b, char *s, t_flags *f);
 void                ft_error(void);
+void                ft_flag_enable(t_flags *f);
 
 #endif

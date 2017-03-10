@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/gnl/get_next_line.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/gnl/get_next_line.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/main.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/main.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/move_stack.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/move_stack.c.o"
+  "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/move_stack2.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/move_stack2.c.o"
+  "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/sub.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/sub.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/usage.c" "/nfs/2016/o/orizhiy/ClionProjects/push_swap_checker/cmake-build-debug/CMakeFiles/push_swap_checker.dir/usage.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap_checker.dir/move_stack.c.o"
   "CMakeFiles/push_swap_checker.dir/checker.c.o"
   "CMakeFiles/push_swap_checker.dir/gnl/get_next_line.c.o"
+  "CMakeFiles/push_swap_checker.dir/move_stack2.c.o"
+  "CMakeFiles/push_swap_checker.dir/sub.c.o"
   "push_swap_checker.pdb"
   "push_swap_checker"
 )
