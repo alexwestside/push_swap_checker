@@ -1,13 +1,13 @@
 
 #include "push_swap_checker.h"
 
-void ft_error(void)
+void    ft_error(void)
 {
     ft_printf("Error\n");
     exit(EXIT_FAILURE);
 }
 
-void ft_usage_chk(char *av)
+void    ft_usage_chk(char *av)
 {
     ft_printf("usage: %s\n", av);
     ft_printf("use integer >= -2147483648 and <= 2147483647\n");
@@ -21,10 +21,10 @@ void ft_usage_chk(char *av)
     exit(EXIT_FAILURE);
 }
 
-long long int ft_atoi_push_swap(char *s)
+long long int   ft_atoi_push_swap(char *s)
 {
-    long long int res;
-    int sign;
+    long long int   res;
+    int             sign;
 
     res = 0;
     sign = 0;
@@ -47,7 +47,7 @@ long long int ft_atoi_push_swap(char *s)
         return (res);
 }
 
-void ft_check_dublicates(int val, t_stack *a)
+void    ft_check_dublicates(int val, t_stack *a)
 {
     t_stack *list;
 
@@ -60,13 +60,13 @@ void ft_check_dublicates(int val, t_stack *a)
     }
 }
 
-void ft_error_chk(void)
+void    ft_error_chk(void)
 {
     ft_printf("Error\n");
     exit(EXIT_FAILURE);
 }
 
-void ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
+void    ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
 {
     if (!a->next)
     {
@@ -84,10 +84,10 @@ void ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
     }
 }
 
-int ft_if_is_sorted(t_stack *a, t_flags *f)
+int     ft_if_is_sorted(t_stack *a, t_flags *f)
 {
     t_stack *list;
-    int val;
+    int     val;
 
     list = a;
     if (list)
@@ -105,7 +105,7 @@ int ft_if_is_sorted(t_stack *a, t_flags *f)
     return (1);
 }
 
-void ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
+void    ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
 {
     t_stack *list1;
     t_stack *list2;
@@ -138,7 +138,7 @@ void ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
     ft_printf("\n");
 }
 
-void ft_answer(t_stack **a, t_stack **b, t_flags *f)
+void    ft_answer(t_stack **a, t_stack **b, t_flags *f)
 {
     if (!(*a))
         ft_printf("KO\n Stack is AMPTY!!!\n");
@@ -152,7 +152,7 @@ void ft_answer(t_stack **a, t_stack **b, t_flags *f)
     exit(EXIT_SUCCESS);
 }
 
-int ft_fill_flags(char s, t_flags *f)
+int     ft_fill_flags(char s, t_flags *f)
 {
     if (s == 'v' || s == 'c' || s == 'n' || s == 'i' || s == 'e' || s == 'd')
     {
@@ -167,7 +167,7 @@ int ft_fill_flags(char s, t_flags *f)
     return (0);
 }
 
-int ft_fast_check(char s)
+int     ft_fast_check(char s)
 {
     if (s == 'v' || s == 'c' || s == 'n' || s == 'i' || s == 'e' || s == 'd')
         return (1);
