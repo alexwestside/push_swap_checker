@@ -20,7 +20,7 @@ typedef struct 	s_flags
     int starr_end_mode 		: 1;	// -i
     int enable_all_flags 	: 1;	// -e
     int disable_all_flags 	: 1;	// -d
-    int count_op		    : 1;	// count operation
+    int count_op;               	// count operation
 
 }				t_flags;
 

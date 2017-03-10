@@ -147,6 +147,8 @@ void ft_answer(t_stack **a, t_stack **b, t_flags *f)
     else
         !ft_if_is_sorted(*a, f) ? ft_printf("OK\n") : ft_printf("KO\n");
     f->starr_end_mode ? ft_print_stack(a, b, f) : 0;
+    f->number_oper_mode ? ft_printf("%d\n", f->count_op) : 0;
+    f->status_oper_mode ? ft_print_stack(a, b, f) : 0;
     exit(EXIT_SUCCESS);
 }
 
