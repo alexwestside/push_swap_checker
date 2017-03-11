@@ -44,7 +44,7 @@ void				ft_check_dublicates(int val, t_stack *a);
 void				ft_error_chk(void);
 void				ft_usage_chk(char *av);
 void				ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f);
-int					ft_if_is_sorted(t_stack *a, t_flags *f);
+int					ft_if_is_sorted(t_stack *a, t_stack *b, t_flags *f);
 void				ft_print_stack(t_stack **a, t_stack **b, t_flags *f);
 void				ft_answer(t_stack **a, t_stack **b, t_flags *f);
 void				ft_std_input(t_stack **a, t_stack **b, char *s, t_flags *f);
@@ -60,5 +60,8 @@ void				ft_push_pa_pb(t_stack **a, t_stack **b, char *s, t_flags *f);
 void				ft_rotate_ra_rb_rr(t_stack **a, t_stack **b, char *s, t_flags *f);
 void				ft_rrotat_rrra_rrb_rrr(t_stack **a, t_stack **b, char *s, t_flags *f);
 void				ft_flag_enable(t_flags *f);
+int					ft_check_move(char *s);
+t_stack				*ft_end(t_stack *head);
+int					ft_check_size(t_stack *head);
 
 #endif

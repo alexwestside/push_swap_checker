@@ -27,13 +27,15 @@ long long int	ft_atoi_push_swap(char *s)
 		return (res);
 }
 
-int				ft_if_is_sorted(t_stack *a, t_flags *f)
+int				ft_if_is_sorted(t_stack *a, t_stack *b, t_flags *f)
 {
 	t_stack	*list;
 	int		val;
 
 	(void)f;
 	list = a;
+	if (ft_check_size(b))
+		return (1);
 	if (list)
 	{
 		val = list->val;

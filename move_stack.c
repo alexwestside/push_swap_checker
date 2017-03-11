@@ -32,7 +32,7 @@ void	ft_rotate(t_stack **head, int id, t_flags *f)
 	t_stack	*list;
 	t_stack	*tail;
 
-	if (*head)
+	if (*head && (*head)->next)
 	{
 		list = *head;
 		while (list->next)
@@ -55,7 +55,7 @@ void	ft_rev_rotate(t_stack **head, int id, t_flags *f)
 	t_stack	*list;
 	t_stack	*tail;
 
-	if (*head)
+	if (*head && (*head)->next)
 	{
 		list = *head;
 		while (list->next)
@@ -105,4 +105,12 @@ void	ft_push(t_stack **a, t_stack **b, int id, t_flags *f)
 		ft_printf("%s\n", !id ? "pa" : "pb");
 		f->count_op++;
 	}
+}
+
+int ft_check_size(t_stack *head)
+{
+	t_stack *list;
+
+	list = head;
+	return (list ? 1 : 0);
 }

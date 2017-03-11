@@ -30,7 +30,7 @@ void	ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
 		ft_printf("OK\n");
 		exit(EXIT_SUCCESS);
 	}
-	if (!ft_if_is_sorted(a, f))
+	if (!ft_if_is_sorted(a, b, f))
 	{
 		ft_printf("Stack is alredy ordered!!!\n");
 		f->starr_end_mode ? ft_print_stack(&a, &b, f) : 0;
@@ -74,7 +74,7 @@ void	ft_answer(t_stack **a, t_stack **b, t_flags *f)
 	else if (!(*a)->next)
 		ft_printf("Stack is alredy ordered!!!\n");
 	else
-		!ft_if_is_sorted(*a, f) ? ft_printf("OK\n") : ft_printf("KO\n");
+		!ft_if_is_sorted(*a, *b, f) ? ft_printf("OK\n") : ft_printf("KO\n");
 	if (f->starr_end_mode && !f->status_oper_mode)
 		ft_print_stack(a, b, f);
 	f->number_oper_mode ? ft_printf("%d\n", f->count_op) : 0;
