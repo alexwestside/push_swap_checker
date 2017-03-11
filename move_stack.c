@@ -23,7 +23,7 @@ void	ft_swap(t_stack **head, int id, t_flags *f)
 	}
 	if (id != -1 && f->status_oper_mode)
 		ft_printf("%s\n", !id ? "sa" : "sb");
-	if (id != -1 && f->number_oper_mode)
+	if (id != -1/* && f->number_oper_mode*/)
 		f->count_op++;
 }
 
@@ -46,7 +46,7 @@ void	ft_rotate(t_stack **head, int id, t_flags *f)
 	}
 	if (id != -1 && f->status_oper_mode)
 		ft_printf("%s\n", !id ? "ra" : "rb");
-	if (id != -1 && f->number_oper_mode)
+	if (id != -1/* && f->number_oper_mode*/)
 		f->count_op++;
 }
 
@@ -69,7 +69,7 @@ void	ft_rev_rotate(t_stack **head, int id, t_flags *f)
 	}
 	if (id != -1 && f->status_oper_mode)
 		ft_printf("%s\n", !id ? "rra" : "rrb");
-	if (id != -1 && f->number_oper_mode)
+	if (id != -1/* && f->number_oper_mode*/)
 		f->count_op++;
 }
 
@@ -101,10 +101,8 @@ void	ft_push(t_stack **a, t_stack **b, int id, t_flags *f)
 		tail->prev = NULL;
 	}
 	if (f->status_oper_mode)
-	{
 		ft_printf("%s\n", !id ? "pa" : "pb");
-		f->count_op++;
-	}
+	f->count_op++;
 }
 
 int ft_check_size(t_stack *head)

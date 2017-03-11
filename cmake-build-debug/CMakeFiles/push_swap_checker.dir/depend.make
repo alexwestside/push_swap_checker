@@ -23,6 +23,18 @@ CMakeFiles/push_swap_checker.dir/move_stack.c.o: ../gnl/get_next_line.h
 CMakeFiles/push_swap_checker.dir/move_stack.c.o: ../move_stack.c
 CMakeFiles/push_swap_checker.dir/move_stack.c.o: ../push_swap_checker.h
 
+CMakeFiles/push_swap_checker.dir/move_stack2.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/push_swap_checker.dir/move_stack2.c.o: ../ft_printf/libft/libft.h
+CMakeFiles/push_swap_checker.dir/move_stack2.c.o: ../gnl/get_next_line.h
+CMakeFiles/push_swap_checker.dir/move_stack2.c.o: ../move_stack2.c
+CMakeFiles/push_swap_checker.dir/move_stack2.c.o: ../push_swap_checker.h
+
+CMakeFiles/push_swap_checker.dir/sub.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/push_swap_checker.dir/sub.c.o: ../ft_printf/libft/libft.h
+CMakeFiles/push_swap_checker.dir/sub.c.o: ../gnl/get_next_line.h
+CMakeFiles/push_swap_checker.dir/sub.c.o: ../push_swap_checker.h
+CMakeFiles/push_swap_checker.dir/sub.c.o: ../sub.c
+
 CMakeFiles/push_swap_checker.dir/usage.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/push_swap_checker.dir/usage.c.o: ../ft_printf/libft/libft.h
 CMakeFiles/push_swap_checker.dir/usage.c.o: ../gnl/get_next_line.h
