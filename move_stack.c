@@ -92,7 +92,7 @@ void	ft_push(t_stack **a, t_stack **b, int id, t_flags *f)
 	{
 		tail = *b;
 		tail->prev = *a;
-		//tail = tail->prev;
+		tail = tail->prev;
 		list = list->next ? list->next : NULL;
 		*a = list;
 		tail->next = *b;
