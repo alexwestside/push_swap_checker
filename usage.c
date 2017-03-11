@@ -1,7 +1,7 @@
 
 #include "push_swap_checker.h"
 
-void ft_usage_chk(char *av)
+void	ft_usage_chk(char *av)
 {
 	ft_printf("usage: %s\n", av);
 	ft_printf("use integer >= -2147483648 and <= 2147483647\n");
@@ -15,13 +15,13 @@ void ft_usage_chk(char *av)
 	exit(EXIT_FAILURE);
 }
 
-void ft_error_chk(void)
+void	ft_error_chk(void)
 {
 	ft_printf("Error\n");
 	exit(EXIT_FAILURE);
 }
 
-void ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
+void	ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
 {
 	if (!a->next)
 	{
@@ -39,7 +39,7 @@ void ft_exit_success_chk(t_stack *a, t_stack *b, t_flags *f)
 	}
 }
 
-void ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
+void	ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
 {
 	t_stack *list1;
 	t_stack *list2;
@@ -53,18 +53,28 @@ void ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
 	ft_printf("%s----------------   ----------------\n", s, END);
 	while (list1 || list2)
 	{
+//		if (list1)
+//		{
+//			ft_printf("%s|%8d%7|   %s", s, list1->val, END);
+//			list1 = list1->next;
+//		}
+//		else
+//			ft_printf("%s|%15|   %s", s, END);
+		list1 ? ft_printf("%s|%8d%7|   %s", s, list1->val, END) : 0;
 		if (list1)
-		{
-			ft_printf("%s|%8d%7|   %s", s, list1->val, END);
 			list1 = list1->next;
-		}
 		else
 			ft_printf("%s|%15|   %s", s, END);
+//		if (list2)
+//		{
+//			ft_printf("%s|%8d%7|\n", s, list2->val, END);
+//			list2 = list2->next;
+//		}
+//		else
+//			ft_printf("%s|%15|%s\n", s, END);
+		list2 ? ft_printf("%s|%8d%7|\n", s, list2->val, END) : 0;
 		if (list2)
-		{
-			ft_printf("|%8d%7|\n", s, list2->val, END);
 			list2 = list2->next;
-		}
 		else
 			ft_printf("%s|%15|%s\n", s, END);
 	}

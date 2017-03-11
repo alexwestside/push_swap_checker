@@ -11,7 +11,7 @@
 # define MAG   "\x1B[35m"
 # define CYN   "\x1B[36m"
 # define WHT   "\x1B[37m"
-# define END    "\x1B[0m"
+# define END   "\x1B[0m"
 
 # include "ft_printf/ft_printf.h"
 # include "gnl/get_next_line.h"
