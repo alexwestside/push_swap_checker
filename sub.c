@@ -29,10 +29,10 @@ long long int	ft_atoi_push_swap(char *s)
 
 int				ft_if_is_sorted(t_stack *a, t_flags *f)
 {
-	(void)f;
 	t_stack	*list;
 	int		val;
 
+	(void)f;
 	list = a;
 	if (list)
 	{

@@ -1,7 +1,7 @@
 
 #include "push_swap_checker.h"
 
-void ft_std_input(t_stack **a, t_stack **b, char *s, t_flags *f)
+void	ft_std_input(t_stack **a, t_stack **b, char *s, t_flags *f)
 {
 	if (!ft_isalpha(*s) && *s)
 		ft_error_chk();
@@ -16,7 +16,7 @@ void ft_std_input(t_stack **a, t_stack **b, char *s, t_flags *f)
 	f->status_oper_mode ? ft_print_stack(a, b, f) : 0;
 }
 
-void ft_swap_sa_sb_ss(t_stack **a, t_stack **b, char *s, t_flags *f)
+void	ft_swap_sa_sb_ss(t_stack **a, t_stack **b, char *s, t_flags *f)
 {
 	if (!ft_strcmp(s, "sa"))
 		ft_swap(a, 0, f);
@@ -26,7 +26,7 @@ void ft_swap_sa_sb_ss(t_stack **a, t_stack **b, char *s, t_flags *f)
 		ft_sswap(a, b, f);
 }
 
-void ft_push_pa_pb(t_stack **a, t_stack **b, char *s, t_flags *f)
+void	ft_push_pa_pb(t_stack **a, t_stack **b, char *s, t_flags *f)
 {
 	if (!ft_strcmp(s, "pa"))
 		ft_push(b, a, 0, f);
@@ -34,7 +34,7 @@ void ft_push_pa_pb(t_stack **a, t_stack **b, char *s, t_flags *f)
 		ft_push(a, b, 1, f);
 }
 
-void ft_rotate_ra_rb_rr(t_stack **a, t_stack **b, char *s, t_flags *f)
+void	ft_rotate_ra_rb_rr(t_stack **a, t_stack **b, char *s, t_flags *f)
 {
 	if (!ft_strcmp(s, "ra"))
 		ft_rotate(a, 0, f);
@@ -44,7 +44,7 @@ void ft_rotate_ra_rb_rr(t_stack **a, t_stack **b, char *s, t_flags *f)
 		ft_rrotate(a, b, f);
 }
 
-void ft_rrotat_rrra_rrb_rrr(t_stack **a, t_stack **b, char *s, t_flags *f)
+void	ft_rrotat_rrra_rrb_rrr(t_stack **a, t_stack **b, char *s, t_flags *f)
 {
 	if (!ft_strcmp(s, "rra"))
 		ft_rev_rotate(a, 0, f);

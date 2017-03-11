@@ -53,25 +53,11 @@ void	ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
 	ft_printf("%s----------------   ----------------\n", s, END);
 	while (list1 || list2)
 	{
-//		if (list1)
-//		{
-//			ft_printf("%s|%8d%7|   %s", s, list1->val, END);
-//			list1 = list1->next;
-//		}
-//		else
-//			ft_printf("%s|%15|   %s", s, END);
 		list1 ? ft_printf("%s|%8d%7|   %s", s, list1->val, END) : 0;
 		if (list1)
 			list1 = list1->next;
 		else
 			ft_printf("%s|%15|   %s", s, END);
-//		if (list2)
-//		{
-//			ft_printf("%s|%8d%7|\n", s, list2->val, END);
-//			list2 = list2->next;
-//		}
-//		else
-//			ft_printf("%s|%15|%s\n", s, END);
 		list2 ? ft_printf("%s|%8d%7|\n", s, list2->val, END) : 0;
 		if (list2)
 			list2 = list2->next;
@@ -81,7 +67,7 @@ void	ft_print_stack(t_stack **a, t_stack **b, t_flags *f)
 	ft_printf("%s----------------   ----------------%s\n", s, END);
 }
 
-void ft_answer(t_stack **a, t_stack **b, t_flags *f)
+void	ft_answer(t_stack **a, t_stack **b, t_flags *f)
 {
 	if (!(*a))
 		ft_printf("KO\n Stack is AMPTY!!!\n");
