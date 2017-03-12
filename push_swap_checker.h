@@ -63,5 +63,6 @@ void				ft_flag_enable(t_flags *f);
 int					ft_check_move(char *s);
 t_stack				*ft_end(t_stack *head);
 int					ft_check_size(t_stack *head);
+void				ft_oper(int id, t_flags **f);
 
 #endif
