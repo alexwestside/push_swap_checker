@@ -8,7 +8,7 @@ long long int	ft_atoi_push_swap(char *s)
 
 	res = 0;
 	sign = 0;
-	if (!*s)
+	if (!*s || ft_strlen(s) > 11)
 		ft_error_chk();
 	if (*s == '-' || *s == '+')
 	{
